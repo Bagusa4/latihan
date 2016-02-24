@@ -190,16 +190,18 @@
 
 	<div id="wrapper" class="bordering bgcolor wp2">
 		<h2> Audio </h2>
+		<audio controls="" src="http://us.kradio.in:8888/;stream.mp3&type=mp3&volume=50&autostart=true&repeat=list&plugins=googlytics-1""></audio>
 	</div>
 
 	<div id="wrapper" class="bordering bgcolor wp3">
 		<h2> Image </h2>
+		<img src="../P_20150105_114522-Edit.jpg" width="100%">
 	</div>
 
 	<div id="wrapper" class="bordering bgcolor wp4">
 		<h2> Video </h2>
-		<video controls>
-			<source src="https://www.youtube.com/500e8fb4-f5cc-43c6-8ccf-2c85d9d1a914" type="video/mp4">
+		<video width="100%" controls>
+			<source src="../Cara menginstall Windows10 di Virtual Machine ( VMWare ) - Bagusa4 Tutorial ~ Kocak.mp4" type="video/mp4">
 		</video>
 	</div>
 
@@ -219,21 +221,22 @@
 			$wp1 = $(".wp1"),
 			$wp2 = $(".wp2"),
 			$wp3 = $(".wp3"),
+			$wp4 = $(".wp4"),
 			$navul = $nav.find("ul");
 
-		$wp2.hide(); $wp3.hide();
+		$wp2.hide(); $wp3.hide(); $wp4.hide();
 
 		$navul.find("li").eq(0).click(function () {
-			$wp1.show(); $wp2.hide(); $wp3.hide();
+			$wp1.show(); $wp2.hide(); $wp3.hide(); $wp4.hide();
 		});
 		$navul.find("li").eq(1).click(function () {
-			$wp1.hide(); $wp2.show(); $wp3.hide();
+			$wp1.hide(); $wp2.show(); $wp3.hide(); $wp4.hide();
 		});
 		$navul.find("li").eq(2).click(function () {
-			$wp1.hide(); $wp2.hide(); $wp3.show();
+			$wp1.hide(); $wp2.hide(); $wp3.show(); $wp4.hide();
 		});
 		$navul.find("li").eq(3).click(function () {
-			alert("Emm, Menu ini belum tersedia :) :)");
+			$wp1.hide(); $wp2.hide(); $wp3.hide(); $wp4.show();
 		});
 
 
