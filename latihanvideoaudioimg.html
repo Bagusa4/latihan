@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Latihan Video Audio Image</title>
+	<style type="text/css">
+		#navigasi {
+		    float: left;
+		    margin: -2% 2% auto -2%;
+		    height: 100%;
+		    background-color: #ddd;
+		    padding-right: 2%;
+		    position: fixed;
+		}
+		#navigasi > ul {
+    		list-style: none;
+		}
+		#wrapper {
+			margin: auto auto auto 7%;
+		}
+		#wrapper > header > h1 {
+			text-align: center;
+		}
+		#video, #audio, #img, #about {
+			width: 80%;
+			padding: 2px 4px;
+			border: 2px dotted #ddd;
+		}
+		#video, #audio, #img, #about > h2 {
+			text-align: center;
+		}
+		#video > video, #audio > audio, #img > img, #about > p {
+			width: 100%;
+		}
+		#video > video {
+
+		}
+		#audio > audio {
+			
+		}
+		#img > img {
+			
+		}
+	</style>
+</head>
+<body>
+	<nav id="navigasi">
+		<ul>
+			<li><a href="#wrapper">Home</a></li>
+			<li><a href="#video">Video</a></li>
+			<li><a href="#audio">Audio</a></li>
+			<li><a href="#img">Image</a></li>
+			<li><a href="#about">About</a></li>
+		</ul>
+	</nav>
+	<div id="wrapper">
+		<header>
+			<h1>Ini Adalah Video Audio Image</h1>
+		</header>
+
+		<div id="video">
+			<h2> Ini Video - Tutorial VMware Install Sistem Operasi Secara Virtual </h2>
+			<video controls>
+				<source src="Cara menginstall Windows10 di Virtual Machine ( VMWare ) - Bagusa4 Tutorial ~ Kocak.mp4" type"video/mp4">
+			</video>
+		</div><br/>
+
+		<div id="audio">
+			<h2> Ini Audio - Whistling Down the Road </h2>
+			<audio controls>
+				<source src="Whistling_Down_the_Road.mp3" type="audio/mp3">
+			</audio>		
+		</div><br/>
+
+		<div id="img">
+			<h2> Ini Image - By Bagusa4 Photography ~ Beauty Clouds </h2>
+			<img src="P_20150105_114522 - Edit.jpg" type="JPG">
+		</div><br/>
+
+		<div id="about">
+			<h2> About Bagus </h2>
+			<p> Saya hanyalah seorang remaja biasa yang hanya bisa belajar dan mencoba, sungguh di hati saya hanya mencintai dua perempuan yang benar benar saya sayang satu ibu saya dan tentunya kekasih saya. :)</p>
+		</div>
+	</div>
+
+
+<!-- Ini Yes Yes -->
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+	  $('a[href*=#]:not([href=#])').click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      if (target.length) {
+	        $('html,body').animate({
+	          scrollTop: target.offset().top
+	        }, 1000);
+	        return false;
+	      }
+	    }
+	  });
+	});
+</script>
+</body>
+</html>

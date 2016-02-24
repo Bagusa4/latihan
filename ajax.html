@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>I Need You</title>
+	<style type="text/css">
+
+	#loveyou > p {
+		display: none;
+	}
+
+	.istill {
+		width: 200px;
+		height: auto;
+		border: 2px solid rgb(221, 221, 221);
+		padding: 2px;
+		text-align: center;
+		position: fixed;
+		margin: -15% 42%;
+		display: none;
+	}
+
+	.coverlove {
+		background: black no-repeat center center fixed; 
+		  -webkit-background-size: cover;
+		  -moz-background-size: cover;
+		  -o-background-size: cover;
+		  background-size: cover;
+	}
+
+	</style>
+</head>
+<body>
+
+<div id="loveyou">
+
+	<p> Hai </p>
+	<p>Mungkin ini waktu yang susah</p>
+	<p>Dimana perasaanku padamu masih terus berlanjut</p>
+	<p>Namun kau tidak</p>
+	<p>Kutahu itu semua salahku</p>
+	<p>Kutahu aku salah</p>
+	<p>Memaksakan suatu kehendak yang seharusnya tidak aku lakukan</p>
+	<p>Aku tahu</p>
+	<p>Aku pantas menerimanya</p>
+	<p>Kuharap kau akan selalu menemaniku kembali</p>
+	<p>To Arlista</p>
+
+	<div class="istill">
+
+		<p> I Still Love You !!!!!!!!!! </p>
+
+	</div>
+
+</div>
+
+<script type="text/javascript" src="assets/node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+
+$(document).on("ready", function() {
+	function resizew() {
+		var win = $(window);
+		var coverlove = $(".coverlove");
+
+		coverlove.css({"width" : win.width(), "height" : win.height()});
+	}
+	resizew();
+	$(window).resize(function () {
+		resizew();
+	});
+
+	var body = $("body");
+	var loveyou = $("#loveyou");
+	var istill = $(".istill");
+	for(i = 1; i < 11; i++) {
+		loveyou.find("p:first-child").fadeIn( (i++) + 1000 * 2, function() {
+			loveyou.find("p:nth-child(2)").fadeIn( (i++) + 1000 * 2, function() {
+				loveyou.find("p:nth-child(3)").fadeIn( (i++) + 1000 * 2, function() {
+					loveyou.find("p:nth-child(4)").fadeIn( (i++) + 1000 * 2, function() {
+						loveyou.find("p:nth-child(5)").fadeIn( (i++) + 1000 * 2, function() {
+							loveyou.find("p:nth-child(6)").fadeIn( (i++) + 1000 * 2, function() {
+								loveyou.find("p:nth-child(7)").fadeIn( (i++) + 1000 * 2, function() {
+									loveyou.find("p:nth-child(8)").fadeIn( (i++) + 1000 * 2, function() {
+										loveyou.find("p:nth-child(9)").fadeIn( (i++) + 1000 * 2, function() {
+											loveyou.find("p:nth-child(10)").fadeIn( (i++) + 1000 * 2, function() {
+												loveyou.find("p:nth-child(11)").fadeIn( (i++) + 1000 * 2, function() {
+													setTimeout( function() {
+														//alert("I STILL LOVE YOU !!!!!!!");
+														body.append("<div class='coverlove'></div>");
+														istill.clone().appendTo(".coverlove").fadeIn((i++) + 2000 * 2);
+													}, 2000);
+												});											
+											});
+										});
+									});
+								});
+							});
+						});
+					});
+				});
+			});
+		});
+	}
+});
+
+</script>
+</body>
+</html>

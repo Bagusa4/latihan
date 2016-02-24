@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Planets Apluss</title>
+	<link href="../assets/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"></link>
+	<link href="../assets/node_modules/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"></link>
+	<style type="text/css">
+		h1 {
+			text-align: center;
+		}
+		#planets {
+			margin: 10% 44%;
+		}
+    .Planets {
+      display: none;
+    }
+	</style>
+</head>
+<body>
+
+<header>
+	<h1> Image Planets Apluss </h1>
+</header>
+
+<img id="planets" src="../assets/img/planets.gif" alt="Planets" usemap="#planetmap" style="width:145px;height:126px;">
+
+<map name="planetmap">
+  <area shape="rect" coords="0,0,82,126" alt="Sun" href="#PlanetsMatahari" class="PlanetsMatahari">
+  <area shape="circle" coords="90,58,3" alt="Mercury" href="#PlanetsMercury" class="PlanetsMercury">
+  <area shape="circle" coords="124,58,8" alt="Venus" href="#PlanetsVenus" class="PlanetsVenus">
+</map>
+
+<div id="containter">
+  <!-- Modal Planet 1 -->
+  <div id="PlanetsMatahari" class="Planets">
+    <!--Content-->
+
+    <img src="../assets/img/sun.gif" alt="Sun" style="width:auto;height:auto;">
+
+    <p>Matahari atau Surya adalah bintang di pusat Tata Surya. Bentuknya nyaris bulat dan terdiri dari plasma panas bercampur medan magnet. Wikipedia</p>
+  	<p>
+  	Jarak ke Bumi: 149.600.000 km<br/>
+  	Suhu permukaan: 5.778 K<br/>
+  	Radius rata-rata: 696.000 km<br/>
+  	Massa: 1,989E30 kg<br/>
+  	Magnitudo: -26,74<br/>
+  	Orbit: Pusat Galaksi<br/>
+  	</p>
+
+  <!-- End Content -->
+  </div>
+
+  <!-- Modal Planet 1 -->
+  <div id="PlanetsMercury" class="Planets">
+    <!-- Content -->
+
+    <img src="../assets/img/merglobe.gif" alt="Sun" style="width:auto;height:auto;">
+
+    <p>Merkurius adalah planet terkecil di dalam tata surya dan juga yang terdekat dengan Matahari dengan kala revolusi 88 hari dan kala rotasi 59 hari. Wikipedia</p>
+  	<p>
+  	Radius rata-rata: 2.440 km<br/>
+  	Gravitasi: 3,7 m/s²<br/>
+  	Jarak dari Matahari: 57.910.000 km<br/>
+  	Luas permukaan: 74.800.000 km²<br/>
+  	Massa: 328,5E21 kg (0,055 Massa bumi)<br/>
+  	Usia: 4,5 miliar tahun<br/>
+  	</p>
+
+    <!-- End Conten -->
+  </div>
+
+  <!-- Modal Planet 1 -->
+  <div id="PlanetsVenus" class="Planets">
+    <!-- Content -->
+
+    <img src="../assets/img/venglobe.gif" alt="Sun" style="width:auto;height:auto;">
+
+    <p>Venus adalah planet terdekat kedua dari Matahari setelah Merkurius. Planet ini mengorbit Matahari selama 224,7 hari Bumi. Venus tidak memiliki satelit alami dan dinamai dari dewi cinta dan kecantikan dalam mitologi Romawi. Wikipedia</p>
+  	<p>
+  	Massa: 4,867E24 kg (0,815 Massa bumi)<br/>
+  	Jarak dari Matahari: 108.200.000 km<br/>
+  	Luas permukaan: 460.234.317 km²<br/>
+  	Radius rata-rata: 6.052 km<br/>
+  	Usia: 4,5 miliar tahun<br/>
+  	Gravitasi: 8,87 m/s²<br/>
+  	</p>
+
+    <!-- End Conten -->
+  </div>
+</div>
+
+<script type="text/javascript" src="../assets/node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).on("ready", function() {
+    $(".PlanetsMatahari").click(function () { 
+      $("#PlanetsMatahari").show();
+      $("#PlanetsMercury").hide();
+      $("#PlanetsVenus").hide();
+    });
+    $(".PlanetsMercury").click(function () { 
+      $("#PlanetsMatahari").hide();
+      $("#PlanetsMercury").show();
+      $("#PlanetsVenus").hide();
+    });
+    $(".PlanetsVenus").click(function () { 
+      $("#PlanetsMatahari").hide();
+      $("#PlanetsMercury").hide();
+      $("#PlanetsVenus").show();
+    });
+		console.log("Success");
+	});
+</script>
+</body>
+</html>

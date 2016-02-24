@@ -1,0 +1,41 @@
+body {
+	background-image: url("img_flwr.gif"), url("paper.gif");
+	background-position: right bottom, left top;
+	background-repeat: no-repeat, repeat;
+	padding: 15px;
+}
+
+.bgtrans {
+	background-color: rgba(255, 255, 255, 0.58);
+}
+
+#input > form {
+	padding: 2% 15%;
+}
+#input > form,
+#input > form > table {
+	margin: auto 15% auto;
+}
+#input > form > table,
+#input > form > table > tbody > tr {
+	border: 8px dotted #dedede;
+	border-radius: 20px;
+	padding: 20px;
+}
+
+#hasil {
+	margin: auto 10% auto;
+}
+#hasil > table {
+	width: 100%;
+}
+#hasil > table, 
+#hasil > table > thead, 
+#hasil > table > tbody, 
+#hasil > table > thead > tr, 
+#hasil > table > thead > tr > th, 
+#hasil > table > tbody > tr, 
+#hasil > table > tbody > tr > td {
+	border: 2px double #ddd;
+	text-align: center;
+}
